@@ -1,0 +1,18 @@
+.news-div {
+    padding: auto;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+    border-color: black; 
+    background-color: rgb(233, 229, 229);
+}
+.project-div {
+    padding: auto;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+    border-color: black; 
+    background-color: rgb(233, 229, 229);
+}

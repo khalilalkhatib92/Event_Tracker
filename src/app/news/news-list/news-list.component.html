@@ -1,0 +1,15 @@
+<app-generic-list [list]="news">
+    <ng-container content>
+        <div class="news-container">
+            <div *ngFor="let new1 of news; let index = index" class="new-container">
+                <a><img src="{{new1.poster}}" alt="Poster"></a>
+                <p><a>{{new1.title}}</a></p>
+                <div>
+                    <a mat-flat-button color="primary">Edit</a>
+                    <button mat-flat-button type="button" color="warn">Delete</button>
+                </div>
+            </div>
+
+        </div>
+    </ng-container>
+</app-generic-list>

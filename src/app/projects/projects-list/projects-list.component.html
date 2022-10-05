@@ -1,0 +1,16 @@
+<app-generic-list [list]="project">
+    <ng-container content>
+        <div class="projects-container">
+            <div *ngFor="let proj of project, let index = index" class="project-container">
+                <a><img alt="Poster"></a>
+                <p>{{proj.title}}</p>
+                <div>
+                    <a mat-flat-button color="primary">Edit</a>
+                    <button mat-flat-button type="button" color="warn">Delete</button>
+                </div>
+
+            </div>
+            
+        </div>
+    </ng-container>
+</app-generic-list>
