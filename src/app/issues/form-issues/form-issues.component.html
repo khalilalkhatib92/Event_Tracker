@@ -5,6 +5,58 @@
         <input formControlName="name" matInput>
         <mat-error *ngIf="form.invalid">{{getErrorMessageFieldName()}}</mat-error>
     </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Date</mat-label>
+        <input formControlName="dateOfIssue" matInput [matDatepicker]="picker"/>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>System Target</mat-label>
+        <mat-select formControlName="projectId">
+            <mat-option *ngFor="let proj of projects" [value]="proj.id">{{proj.name}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Problem Description</mat-label>
+        <textarea matInput formControlName="problemDesc" 
+        cdkTextareaAutosize 
+        cdkAutosizeMinRows="5"
+        cdkAutosizeMaxRows="5">
+        </textarea>
+    </mat-form-field>
+
+    <app-input-img 
+    (urlCurrentImage)="model?.picture"
+    (onImageSelected)="onImageSelected($event)"></app-input-img>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Problem Tracking</mat-label>
+        <textarea matInput formControlName="problemTracking" 
+        cdkTextareaAutosize 
+        cdkAutosizeMinRows="4"
+        cdkAutosizeMaxRows="5">
+        </textarea>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Problem Solution</mat-label>
+        <input matInput formControlName="problemSolution"/>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Solution Side</mat-label>
+        <input matInput formControlName="solutionSide"/>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Problrm Status</mat-label>
+        <mat-select formControlName="problemStatus">
+            <mat-option *ngFor="let status of probStatuses" [value]="status.id">{{status.name}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Documented By</mat-label>
+        <input matInput formControlName="documentedBy"/>
+    </mat-form-field>
+    
     <div>
         <button mat-flat-button color="primary" [disabled]="form.invalid">Save Changes</button>
         <a mat-stroked-button routerLink="/issuse">Cancel</a>

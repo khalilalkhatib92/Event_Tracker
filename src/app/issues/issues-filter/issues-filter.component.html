@@ -1,0 +1,33 @@
+<h2>Search Issues</h2>
+<form [formGroup]="form">
+    <mat-form-field appearance="outline">
+        <mat-label>Problem Title</mat-label>
+        <input formControlName="title" matInput/>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>System Target</mat-label>
+        <mat-select formControlName="systemTargetId">
+            <mat-option *ngFor="let system of systems" [value]="system.id">{{system.name}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <div>
+        <mat-checkbox formControlName="probOpend">Opened</mat-checkbox>
+    </div>
+    <div>
+        <mat-checkbox formControlName="probSolved">Solved</mat-checkbox>
+    </div>
+    <div>
+        <mat-checkbox formControlName="probPending">Pending</mat-checkbox>
+    </div>
+    <div>
+        <mat-checkbox formControlName="probInProgress">InProgress</mat-checkbox>
+    </div>
+    <div>
+        <mat-checkbox formControlName="probClosed">Closed</mat-checkbox>
+    </div>
+
+    <div>
+        <button mat-flat-button color="warn" (click)="clearForm()">Clear</button>
+    </div>
+
+</form>

@@ -28,6 +28,8 @@ import { IndexIssuesComponent } from './issues/index-issues/index-issues.compone
 import { CreateIssuesComponent } from './issues/create-issues/create-issues.component';
 import { EditIssuesComponent } from './issues/edit-issues/edit-issues.component';
 import { FormIssuesComponent } from './issues/form-issues/form-issues.component';
+import {IssuesFilterComponent} from './issues/issues-filter/issues-filter.component';
+import { InputImgComponent } from './utilities/input-img/input-img.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { FormIssuesComponent } from './issues/form-issues/form-issues.component'
     IndexIssuesComponent,
     CreateIssuesComponent,
     EditIssuesComponent,
-    FormIssuesComponent
+    FormIssuesComponent,
+    IssuesFilterComponent,
+    InputImgComponent
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,7 @@ import { EventComponent } from './event/event.component';
 import { CreateIssuesComponent } from './issues/create-issues/create-issues.component';
 import { EditIssuesComponent } from './issues/edit-issues/edit-issues.component';
 import { IndexIssuesComponent } from './issues/index-issues/index-issues.component';
+import { IssuesFilterComponent } from './issues/issues-filter/issues-filter.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: 'issuse' , component:IndexIssuesComponent},
   {path: 'issuse/create', component:CreateIssuesComponent},
   {path: 'issuse/edit/:id', component:EditIssuesComponent},
+  {path: 'issues/filter', component:IssuesFilterComponent},
 
   {path:'login' , component:LogoutComponent},
   {path:'**', redirectTo:''}
