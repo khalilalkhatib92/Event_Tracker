@@ -17,9 +17,8 @@ export class FormIssuesComponent implements OnInit {
   probStatuses = [{id:1, name:'Opened'},{id:2, name:'Solved'}, {id:3, name:'Pending'},{id:4, name:'In Porgress'}, {id:5, name: 'Closed'}];
 
   @Input()
-  model!: issueDTO;
-
-  //model!: issueCreationDTO;
+  //model!: issueDTO;
+  model!: issueCreationDTO;
 
   @Output()
   onSaveChanges: EventEmitter<issueCreationDTO> = new EventEmitter<issueCreationDTO>();

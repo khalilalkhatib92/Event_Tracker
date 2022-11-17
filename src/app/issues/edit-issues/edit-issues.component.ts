@@ -21,7 +21,7 @@ export class EditIssuesComponent implements OnInit {
     solutionSide: 'Bissan',
     problemStatus: 2,
     documentedBy: 'Khalil',
-    picture: 'https://www.freeiconspng.com/thumbs/error-icon/error-icon-32.png'
+    picture: 'https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
   };
   ngOnInit(): void {
     // this.activatedRoute.params.subscribe(params =>{
