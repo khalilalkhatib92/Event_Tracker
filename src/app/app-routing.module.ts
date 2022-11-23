@@ -8,6 +8,9 @@ import { IndexIssuesComponent } from './issues/index-issues/index-issues.compone
 import { IssuesFilterComponent } from './issues/issues-filter/issues-filter.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
+import { CreatePostComponent } from './posts/create-post/create-post.component';
+import { EditPostComponent } from './posts/edit-post/edit-post.component';
+import { PostsComponent } from './posts/posts.component';
 
 const routes: Routes = [
   // {path:'' , component: LoginComponent},
@@ -24,6 +27,10 @@ const routes: Routes = [
   {path: 'issuse/create', component:CreateIssuesComponent},
   {path: 'issuse/edit/:id', component:EditIssuesComponent},
   {path: 'issues/filter', component:IssuesFilterComponent},
+
+  {path: 'post', component:PostsComponent},
+  {path:'post/create', component:CreatePostComponent},
+  {path: 'post/edit/:id', component:EditPostComponent},
 
   {path:'login' , component:LogoutComponent},
   {path:'**', redirectTo:''}

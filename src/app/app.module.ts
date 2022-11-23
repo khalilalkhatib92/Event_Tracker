@@ -30,6 +30,12 @@ import { EditIssuesComponent } from './issues/edit-issues/edit-issues.component'
 import { FormIssuesComponent } from './issues/form-issues/form-issues.component';
 import {IssuesFilterComponent} from './issues/issues-filter/issues-filter.component';
 import { InputImgComponent } from './utilities/input-img/input-img.component';
+import { PostsComponent } from './posts/posts.component';
+import { CreatePostComponent } from './posts/create-post/create-post.component';
+import { EditPostComponent } from './posts/edit-post/edit-post.component';
+import { FormPostComponent } from './posts/form-post/form-post.component';
+import {HttpClientModule} from '@angular/common/http'
+
 
 @NgModule({
   declarations: [
@@ -48,7 +54,11 @@ import { InputImgComponent } from './utilities/input-img/input-img.component';
     EditIssuesComponent,
     FormIssuesComponent,
     IssuesFilterComponent,
-    InputImgComponent
+    InputImgComponent,
+    PostsComponent,
+    CreatePostComponent,
+    EditPostComponent,
+    FormPostComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,7 +73,8 @@ import { InputImgComponent } from './utilities/input-img/input-img.component';
     // MatIconModule,
 
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

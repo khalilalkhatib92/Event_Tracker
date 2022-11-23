@@ -1,0 +1,23 @@
+<form (submit)="saveChanges()" [formGroup]="form">
+    <mat-form-field appearance="outline">
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="title" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Body</mat-label>
+        <textarea
+        cdkTextareaAutosize 
+        cdkAutosizeMinRows="4"
+        cdkAutosizeMaxRows="5"
+        matInput formControlName="body"></textarea>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>User Id</mat-label>
+        <input matInput formControlName="userId" />
+    </mat-form-field>
+    <div>
+        <button mat-flat-button color="primary" [disabled]="form.invalid">Save Changes</button>
+        <a mat-stroked-button routerLink="/post">Cancel</a>
+    </div>
+
+</form>
